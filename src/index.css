@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+  @custom-variant dark (&:where(.dark, .dark *))
+

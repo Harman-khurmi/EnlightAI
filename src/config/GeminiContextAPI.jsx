@@ -51,7 +51,7 @@ const ContextProvider = (props) => {
         const response = await run(inputPrompt)
         // logic to remove * and **
         let responseArray = response.split("**");
-        let newRespons="";
+        let newResponse="";
         for (let i = 0; i < responseArray.length; i++) {
             if (i == 0 || i % 2 !== 1) {
                 newResponse += responseArray[i];

@@ -51,8 +51,8 @@ const ContextProvider = (props) => {
         const response = await run(inputPrompt)
         // logic to remove * and **
         let responseArray = response.split("**");
-        let newResponse;
-        for (let i = 1; i < responseArray.length; i++) {
+        let newRespons="";
+        for (let i = 0; i < responseArray.length; i++) {
             if (i == 0 || i % 2 !== 1) {
                 newResponse += responseArray[i];
             }
@@ -62,7 +62,7 @@ const ContextProvider = (props) => {
         }
         let newResponse2 = newResponse.split("*").join("</br>")
         let delayedResponseArray = newResponse2.split(" ")
-        for (let i = 1; i < delayedResponseArray.length; i++) {
+        for (let i = 0; i < delayedResponseArray.length; i++) {
             const nextWord = delayedResponseArray[i];
             delayParagh(i, nextWord + " ")
         }
